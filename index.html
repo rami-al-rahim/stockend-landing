@@ -7,160 +7,10 @@
     <title>Stockend</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        * {
-            scroll-behavior: smooth;
-        }
-
-        .hero-section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-            background-color: #f8f9fa;
-        }
-
-        .hero-text {
-            max-width: 50%;
-            padding: 20px;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-
-        .hero-text p {
-            font-size: 1.25rem;
-            margin: 20px 0;
-        }
-
-        .hero-text .btn-primary {
-            font-size: 1rem;
-            padding: 10px 20px;
-        }
-
-        .hero-image {
-            max-width: 50%;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .nav-link {
-            font-size: 1rem;
-            margin-right: 15px;
-        }
-
-        .navbar {
-            padding: 15px 30px;
-        }
-
-        .benefit-section {
-            padding: 60px 0;
-            background-color: #f8f9fa;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .benefit-section .container {
-            margin: auto;
-        }
-
-        .benefit-item {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-
-        .benefit-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .benefit-description {
-            font-size: 1rem;
-            color: #6c757d;
-        }
-
-        .footer {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 20px 0;
-        }
-
-        .footer a {
-            color: #ffffff;
-        }
-
-        .footer a:hover {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .footer .social-icons a {
-            font-size: 1.25rem;
-            margin-right: 10px;
-        }
-
-        .footer .social-icons a:hover {
-            color: #007bff;
-        }
-
-        .pricing-section {
-            padding: 60px 0;
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-
-        .pricing-card {
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 20px;
-            transition: transform 0.3s;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .pricing-card p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .pricing-card .price {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6afaec7e55.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8/dist/sweetalert2.css">
+
 </head>
 
 <body>
@@ -194,15 +44,16 @@
                 <div class="col-md-6 hero-text">
                     <h1>Increase your revenue in stock market</h1>
                     <p>With customized stock tracking emails every day</p>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Book My Place in Waitlist</button>
-                    </form>
+                    <div class="form-group">
+                        <input type="text" autocomplete="name" class="form-control" id="name"
+                            placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" autocomplete="email" class="form-control" id="email"
+                            placeholder="Enter your email">
+                    </div>
+                    <button id="submit" onclick="submit" class="btn btn-primary">Book My Place in Waitlist</button>
+
                 </div>
                 <div class="col-md-6 hero-image">
                     <img style="width: 450px;height: 450px;" src="images/hero.svg" alt="Stock Image">
@@ -290,13 +141,12 @@
             <p>&copy; 2024 rami-dev All rights reserved.</p>
         </div>
     </footer>
-    <script>
-    </script>
+    <script></script>
+    <script type="module" src="mian.js"></script>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
